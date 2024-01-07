@@ -12,13 +12,19 @@ bool is_in(int arr[], int size, int n) {
     return false;
 }
 
+void    run_command(void)
+{
+    system("ARG=$(./a.out) ; ./push_swap $ARG | wc -l");
+    // system("ARG=$(./a.out) ; ./push_swap $ARG | ./checker $ARG");
+    // system("ARG=$(./a.out) ; ./push_swap $ARG | ./checker_Mac $ARG");
+}
+
 int main() {
     const int ARRAY_SIZE = 100;
     int arr[ARRAY_SIZE];
 
-    // Seed the random number generator
     srand(time(NULL));
-
+    atexit(run_command);
     for (int i = 0; i < ARRAY_SIZE; i++) {
         int newNum;
         do {
@@ -33,7 +39,3 @@ int main() {
     printf("\n");
     return 0;
 }
-
-// ARG=$(./a.out) ; ./push_swap $ARG | wc -l
-
-//4294967284
