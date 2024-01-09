@@ -1,24 +1,75 @@
 
-# Push_swap tester
+# Breaker
 
-This C program generates a random array of integers, converts them to strings, concatenates them into a space-separated string, and then executes a command using the generated string as an argument. The program includes utility functions for string manipulation, integer-to-string conversion, and checking the presence of an integer in an array.
+**Random Integer Array Generator and Checker**
 
+`breaker` is a versatile C program that generates a random array of integers, performs various operations, and optionally checks the results using a provided sorting algorithm. The tool is designed to be easy to use and provides flexibility in testing sorting algorithms.
 
-## Key Features:
+## Table of Contents
 
-1. **Random Integer Generation:** Generates a random array of integers, alternating between positive and negative values.
-2. **String Manipulation:** Provides a string concatenation function (`ft_strjoin`) and an integer-to-string conversion function (`ft_itoa`).
-3. **Command Execution:** Uses the generated integer array as an argument to execute a command (`./push_swap $ARG | wc -l`) to count the number of moves in a sorting algorithm.
-## Usage:
+- [Features](#features)
+- [Usage](#usage)
+  - [Quick Start](#quick-start)
+  - [Modes](#modes)
+  - [Examples](#examples)
+- [Additional Information](#additional-information)
+- [Contributing](#contributing)
+- [License](#license)
 
-1. Compile the program using a C compiler.
-2. Run the compiled executable to generate a random array and execute the specified command.
-## NOTE:
+## Features
 
-- The program currently includes a command to count the number of moves in the "push_swap" sorting algorithm. Other commands for testing can be uncommented and added as needed.
-## Contributions:
+- Generates a random array of integers.
+- Supports multiple modes to customize functionality.
+- Optional integration with custom sorting algorithms.
+- Displays the number of moves performed by a sorting algorithm.
+- Validates input parameters for ease of use.
+- Supports checking results using custom checkers.
 
-Contributions and improvements are welcome. Feel free to fork the repository, make changes, and submit pull requests.
-## License:
+## Usage
 
-This code is released under the [MIT License](https://opensource.org/licenses/MIT).
+### Quick Start
+
+To quickly generate a random array and display the number of moves performed by a sorting algorithm, use the following command:
+
+```bash
+./breaker NUMBER_OF_RANDOM_NUMBER [MODE]
+```
+
+### Modes
+
+- `0`: Display the number of moves (default if not provided).
+- `1`: Redirect moves to a custom checker (must be named `checker`).
+- `2`: Redirect moves to a custom checker_Mac (must be named `checker_Mac`).
+
+### Examples
+
+1. **Display the Number of Moves:**
+
+    ```bash
+    ./breaker 100
+    ```
+
+2. **Redirect Moves to a Custom Checker:**
+
+    ```bash
+    ./breaker 100 1
+    ```
+
+3. **Redirect Moves to a Custom Checker_Mac:**
+
+    ```bash
+    ./breaker 100 2
+    ```
+
+### Additional Information
+
+- Run `./breaker help` for more detailed information and usage examples.
+
+## Contributing
+
+Contributions and improvements are welcome! Feel free to fork the repository, make changes, and submit pull requests.
+
+## License
+
+This code is released under the [MIT License](LICENSE).
+
