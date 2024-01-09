@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 	len = n_len(n);
 	num = (char *)malloc(len + 1);
 	if (num == NULL)
-		return (printf("malloc error"));
+		return (printf("malloc error"), NULL);
 	if (n < 0)
 	{
 		n *= -1;
@@ -90,16 +90,16 @@ char *final;
 void    run_command(void)
 {
     char    command[10240];
-    snprintf(command, "ARG=$(%s) ; ./push_swap $ARG | wc -l", final);
+    sprintf(command, "ARG=\"%s\" ; ./push_swap $ARG | wc -l", final);
     system(command);
-    // snprintf(command, "ARG=$(%s) ; ./push_swap $ARG | ./checker $ARG", final);
+    // sprintf(command, "ARG="\%s\"; ./push_swap $ARG | ./checker $ARG", final);
     // system(command);
-    // snprintf(command, "ARG=$(%s) ; ./push_swap $ARG | ./checker_Mac $ARG", final);
+    // sprintf(command, "ARG=\"%s)\" ; ./push_swap $ARG | ./checker_Mac $ARG", final);
     // system(command);
 }
 
 int main() {
-    const int ARRAY_SIZE = 100;
+    const int ARRAY_SIZE = 500;
     int arr[ARRAY_SIZE];
     int size = (13 * ARRAY_SIZE) + 1;
 
