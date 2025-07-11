@@ -71,5 +71,5 @@ Contributions and improvements are welcome! Feel free to fork the repository, ma
 
 ## License
 
- This code is released under the [MIT License](LICENSE).
+This code is released under the [MIT License](LICENSE).
 
