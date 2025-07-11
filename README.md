@@ -52,7 +52,7 @@ To quickly generate a random array and display the number of moves performed by 
 2. **Redirect Moves to a Custom Checker:**
 
     ```bash
-    ./breaker 100 1
+    ./breaker 500 1
     ```
 
 3. **Redirect Moves to a Custom Checker_Mac:**
